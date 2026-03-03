@@ -143,3 +143,40 @@ Review by [@qbap](https://github.com/qbap) on ONE Jailbreak: https://onejailbrea
   <p><strong>DontEatMyContent preferences</strong> are available in the <strong>YouTube settings</strong>.</p>
   <p>Source code and additional information are available <a href="https://github.com/therealFoxster/DontEatMyContent">in therealFoxster's GitHub repository</a>.</p>
 </details>
+
+## How to Sideload YTLite on iOS (Windows)
+
+To sideload the **YTLite** app you built via GitHub Actions onto your non-jailbroken iPhone using a Windows PC, the most recommended tool is **Sideloadly** or **AltStore**. 
+
+### Step 1: Download Your Built IPA
+
+1. Go to your forked **YTLite** repository on GitHub.
+2. Navigate to the **Actions** tab.
+3. Click on the most recent successful workflow run (it should be titled "Build and Release YTLite" or similar).
+4. Scroll down to the **Artifacts** section and download the `.ipa` file to your Windows PC. 
+
+### Step 2: Prepare Your Windows PC
+
+Before you can install the app, you must install the following software directly from Apple's website (**not** the Microsoft Store version, which often lacks necessary drivers): 
+
+*   **iTunes for Windows (64-bit)**
+*   **iCloud for Windows** 
+
+### Step 3: Sideload using Sideloadly (Easiest Method) 
+
+1.  **Download Sideloadly:** Install it from the Sideloadly Official Website.
+2.  **Connect Device:** Plug your iPhone into your PC via USB and tap **"Trust"** on the phone if prompted.
+3.  **Configure Sideloadly:**
+    *   Open Sideloadly; your device should appear in the **iDevice** field.
+    *   Drag your downloaded **YTLite .ipa** file into the large IPA icon box.
+    *   Enter your **Apple ID** email.
+4.  **Start Install:** Click **Start**. You may be asked for your Apple ID password; this is sent only to Apple to sign the app for your device.
+5.  **Trust the App:**
+    *   Once "Done" appears, go to your iPhone's **Settings > General > VPN & Device Management**.
+    *   Tap your Apple ID under "Developer App" and select **Trust**.
+    *   *(iOS 16+ only)* Go to **Settings > Privacy & Security**, scroll to the bottom, and enable **Developer Mode**. 
+
+### Important Limitations
+
+*   **7-Day Refresh:** Apps sideloaded with a free Apple ID expire every 7 days. You must reconnect your phone to your PC and run Sideloadly again to "refresh" it.
+*   **3-App Limit:** You can only have 3 active sideloaded apps at one time on a single device.
