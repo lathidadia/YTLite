@@ -6,7 +6,9 @@ A flexible enhancer for YouTube on iOS, featuring over hundred customizable opti
 - [Main Features](#main-features)
 - [FAQ](#faq)
 - [Reviews](#reviews)
+- [Download Pre-built IPA](#download-pre-built-ipa)
 - [How to build a YouTube Plus app using GitHub Actions](#how-to-build-a-youtube-plus-app-using-github-actions)
+- [How to Sideload YTLite on iOS (Windows)](#how-to-sideload-ytlite-on-ios-windows)
 - [Supported YouTube Version](#supported-youtube-version)
 - [Tweak Integration Details](#tweak-integration-details)
 
@@ -36,147 +38,131 @@ A flexible enhancer for YouTube on iOS, featuring over hundred customizable opti
 </details>
 
 ## Main Features
-<li>Download videos, audio (including audio track selection), thumbnails, posts, and profile pictures</li>
-<li>Copy video, comment, and post information</li>
-<li>Interface customization: Remove feed elements, reorder tabs, enable OLED mode, and as use Shorts-only mode</li>
-<li>Player settings: Gestures, default quality, preferred audio track</li>
-<li>Save, Load and Restore settings. Clear cache once or automatically on app startup</li>
-<li>Built-in SponsorBlock</li>
-<li>And much, much more</li>
-<br>
+*   **Downloads:** Save videos, audio (with track selection), thumbnails, posts, and profile pictures.
+*   **Information:** Copy video, comment, and post metadata easily.
+*   **Interface Customization:** Remove feed elements, reorder tabs, enable OLED mode, and use Shorts-only mode.
+*   **Player Settings:** Custom gestures, default quality settings, and preferred audio tracks.
+*   **Maintenance:** Save/load/restore settings and clear cache (manually or on startup).
+*   **SponsorBlock:** Built-in integration to skip sponsorships.
+*   **And much more:** Explore over a hundred customizable options.
 
+> [!TIP]
+> **YouTube Plus preferences can be found directly within the YouTube Settings menu.**
 
-**YouTube Plus preferences can be found in the YouTube Settings**
-
-**All contributors are listed in the Contributors section**
-**Used open-source libraries are listed in the Open Source Libraries section**
+---
 
 ## FAQ
-- [🇺🇸 English FAQ](FAQs/FAQ_EN.md)
-- [🇷🇺 ЧаВо на Русском](FAQs/FAQ_RU.md)
-- [🇮🇹 FAQ in Italiano](FAQs/FAQ_IT.md)
-- [🇵🇱 FAQ po polsku](FAQs/FAQ_PL.md)
+*   [🇺🇸 English FAQ](FAQs/FAQ_EN.md)
+*   [🇷🇺 ЧаВо на Русском](FAQs/FAQ_RU.md)
+*   [🇮🇹 FAQ in Italiano](FAQs/FAQ_IT.md)
+*   [🇵🇱 FAQ po polsku](FAQs/FAQ_PL.md)
 
 ## Reviews
-Review by [@qbap](https://github.com/qbap) on ONE Jailbreak: https://onejailbreak.com/blog/youtube-plus/
+*   Review by [@qbap](https://github.com/qbap) on ONE Jailbreak: [onejailbreak.com/blog/youtube-plus/](https://onejailbreak.com/blog/youtube-plus/)
 
-## How to build a YouTube Plus app using Github actions
+---
+
+## Download Pre-built IPA
+If you do not wish to build the app yourself, you can download the latest pre-built IPA files directly from the releases page:
+
+*   **Latest Releases:** [https://github.com/lathidadia/YTLite/releases](https://github.com/lathidadia/YTLite/releases)
+
+---
+
+## How to build a YouTube Plus app using GitHub Actions
 > [!NOTE]
-> If this your first time, complete following steps before starting:
->
-> 1. Fork this repository using the fork button on the top right
-> 2. On your forked repository, go to **Repository Settings** > **Actions**, enable **Read and Write** permissions.
+> If this is your first time, complete the following steps before starting:
+> 1.  **Fork** this repository using the button on the top right.
+> 2.  In your forked repository, go to **Settings > Actions** and enable **Read and Write** permissions.
 
 <details>
-  <summary>How to build the YouTube Plus app</summary>
+  <summary>Standard Build Process</summary>
   <ol>
     <li>Click on <strong>Sync fork</strong>, and if your branch is out-of-date, click on <strong>Update branch</strong>.</li>
-    <li>Navigate to the <strong>Actions tab</strong> in your forked repository and select <strong>Create YouTube Plus app</strong>.</li>
-    <li>Click the <strong>Run workflow</strong> button located on the right side.</li>
-    <li>Mark or unmark the tweaks you want to integrate. Learn more about them in the <a href="#tweak-integration-details">Tweak Integration Details</a> section.</li>
-    <li>Prepare a decrypted .ipa file <em>(we cannot provide this due to legal reasons)</em>, then upload it to a file provider (e.g., filebin.net, filemail.com, or Dropbox is recommended). Paste the URL of the decrypted IPA file in the provided field.</li>
-    <li><strong>NOTE:</strong> Make sure to provide a direct download link to the file, not a link to a webpage. Otherwise, the process will fail.</li>
-    <li>Enter the tweak version from the releases (the latest release is selected by default). You can also change the BundleID and Display Name if desired.</li>
-    <li>Make sure all inputs are correct, then click <strong>Run workflow</strong> to start the process.</li>
-    <li>Wait for the build to finish. You can download the YouTube Plus app from the releases section of your forked repo. (If you can't find the releases section, go to your forked repo and add /releases to the URL, i.e., github.com/user/YTLite/releases.)</li>
+    <li>Navigate to the <strong>Actions</strong> tab and select <strong>Create YouTube Plus app</strong>.</li>
+    <li>Click the <strong>Run workflow</strong> button.</li>
+    <li>Select the tweaks you want to integrate (see <a href="#tweak-integration-details">Tweak Integration Details</a>).</li>
+    <li>Provide a link to a decrypted .ipa file (e.g., via filebin.net, Dropbox, or filemail.com). <strong>Note:</strong> It must be a direct download link.</li>
+    <li>Select the tweak version and optionally change the BundleID or Display Name.</li>
+    <li>Click <strong>Run workflow</strong> and wait for the process to finish.</li>
+    <li>Download the IPA from the <strong>Releases</strong> or <strong>Artifacts</strong> section of your fork.</li>
   </ol>
 </details>
 
-
 <details>
-  <summary>How to build the YouTube Plus app with your own link for the YouTube Plus tweak</summary>
+  <summary>BETA Build Process (Custom Tweak Link)</summary>
   <ol>
-    <blockquote>
-      <p><strong>NOTE:</strong> This option is primarily intended for building the YouTube Plus app based on the beta file you have. In other cases, it is generally not needed.</p>
-    </blockquote>
-    <li>Click on <strong>Sync fork</strong>, and if your branch is out-of-date, click on <strong>Update branch</strong>.</li>
-    <li>Navigate to the <strong>Actions tab</strong> in your forked repository and select <strong>[BETA] Build YouTube Plus app</strong>.</li>
-    <li>Click the <strong>Run workflow</strong> button located on the right side.</li>
-    <li>Mark or unmark the tweaks you want to integrate. Learn more about them in the <a href="#tweak-integration-details">Tweak Integration Details</a> section.</li>
-    <li>Prepare a decrypted .ipa file <em>(we cannot provide this due to legal reasons)</em>, then upload it to a file provider (e.g., filebin.net, filemail.com, or Dropbox is recommended). Paste the URL of the decrypted IPA file in the provided field.</li>
-    <li>Upload your beta tweak file to a file provider and paste direct link to the <strong>URL to the YouTube Plus tweak file</strong> field. You can also change the BundleID and Display Name if desired.</li>
-    <li><strong>NOTE:</strong> Make sure to provide a direct download link to the file, not a link to a webpage. Otherwise, the process will fail.</li>
-    <li>Make sure all inputs are correct, then click <strong>Run workflow</strong> to start the process.</li>
-    <li>Wait for the build to finish. You can download the YouTube Plus app from the releases section of your forked repo. (If you can't find the releases section, go to your forked repo and add /releases to the URL, i.e., github.com/user/YTLite/releases.)</li>
+    <li>Follow the same steps as above, but select the <strong>[BETA] Build YouTube Plus app</strong> workflow.</li>
+    <li>Provide both the direct link to the decrypted .ipa and the direct link to your custom YouTube Plus tweak file.</li>
+    <li>Click <strong>Run workflow</strong> and wait for the process to finish.</li>
   </ol>
 </details>
+
+---
+
+## How to Sideload YTLite on iOS (Windows)
+To install the IPA onto your non-jailbroken iPhone using Windows, we recommend using **Sideloadly**.
+
+### Step 1: Download Your IPA
+1.  Download your built IPA from your GitHub **Actions** artifacts or the **Releases** page.
+
+### Step 2: Prepare Your Windows PC
+Install the following software directly from Apple's website (not the Microsoft Store):
+*   [iTunes for Windows (64-bit)](https://www.apple.com/itunes/)
+*   [iCloud for Windows](https://support.apple.com/en-us/HT204283)
+
+### Step 3: Install via Sideloadly
+1.  **Launch Sideloadly:** Open the app and connect your iPhone via USB. Tap **Trust** on your phone.
+2.  **Configure:**
+    *   Drag your **YTLite .ipa** into the IPA box.
+    *   Enter your **Apple ID**.
+3.  **Install:** Click **Start**. Enter your Apple ID password if prompted (sent only to Apple).
+4.  **Trust the App:**
+    *   On your iPhone, go to **Settings > General > VPN & Device Management**.
+    *   Tap your Apple ID and select **Trust**.
+    *   *(iOS 16+)* Go to **Settings > Privacy & Security** and enable **Developer Mode**.
+
+### Important Limitations
+*   **7-Day Refresh:** Free Apple IDs must refresh the app every 7 days by reconnecting to Sideloadly.
+*   **3-App Limit:** You can only have 3 sideloaded apps active at once.
+
+---
 
 ## Supported YouTube Version
-<ul>
-   <li><strong>Latest confirmed:</strong> <em>20.42.3</em></li>
-   <li><strong>Date tested:</strong> <em>Nov 5, 2025</em></li>
-   <li><strong>YouTube Plus:</strong> <em>5.2 beta 4</em></li>
-</ul>
+*   **Latest confirmed:** *20.42.3*
+*   **Date tested:** *Nov 5, 2025*
+*   **YouTube Plus:** *5.2 beta 4*
+
+---
 
 ## Tweak Integration Details
+
 <details>
   <summary>YouPiP</summary>
-  <p>YouPiP is a tweak developed by <a href="https://github.com/PoomSmart">PoomSmart</a> that enables the native Picture-in-Picture feature for videos in the iOS YouTube app.</p>
-  <p><strong>YouPiP preferences</strong> are available in the <strong>YouTube settings</strong>.</p>
-  <p>Source code and additional information are available <a href="https://github.com/PoomSmart/YouPiP">in PoomSmart's GitHub repository</a>.</p>
+  <p>Developed by <a href="https://github.com/PoomSmart">PoomSmart</a>. Enables native Picture-in-Picture mode.</p>
+  <p><strong>Source:</strong> <a href="https://github.com/PoomSmart/YouPiP">GitHub Repository</a></p>
 </details>
 
 <details>
   <summary>YTUHD</summary>
-  <p>YTUHD is a tweak developed by <a href="https://github.com/PoomSmart">PoomSmart</a> that unlocks 1440p (2K) and 2160p (4K) resolutions in the iOS YouTube app.</p>
-  <p><strong>YTUHD preferences</strong> are available in the <strong>Video quality preferences</strong> section under <strong>YouTube settings</strong>.</p>
-  <p>Source code and additional information are available <a href="https://github.com/PoomSmart/YTUHD">in PoomSmart's GitHub repository</a>.</p>
+  <p>Developed by <a href="https://github.com/PoomSmart">PoomSmart</a>. Unlocks 1440p (2K) and 2160p (4K) resolutions.</p>
+  <p><strong>Source:</strong> <a href="https://github.com/PoomSmart/YTUHD">GitHub Repository</a></p>
 </details>
 
 <details>
   <summary>Return YouTube Dislikes</summary>
-  <p>Return YouTube Dislikes is a tweak developed by <a href="https://github.com/PoomSmart">PoomSmart</a> that brings back dislikes on the YouTube app.</p>
-  <p><strong>Return YouTube Dislikes preferences</strong> are available in the <strong>YouTube settings</strong>.</p>
-  <p>Source code and additional information are available <a href="https://github.com/PoomSmart/Return-YouTube-Dislikes">in PoomSmart's GitHub repository</a>.</p>
+  <p>Developed by <a href="https://github.com/PoomSmart">PoomSmart</a>. Restores the visibility of dislike counts.</p>
+  <p><strong>Source:</strong> <a href="https://github.com/PoomSmart/Return-YouTube-Dislikes">GitHub Repository</a></p>
 </details>
 
 <details>
   <summary>YouQuality</summary>
-  <p>YouQuality is a tweak developed by <a href="https://github.com/PoomSmart">PoomSmart</a> that allows to view and change video quality directly from the video overlay.</p>
-  <p><strong>YouQuality can be enabled</strong> in the <strong>Video overlay</strong> section under <strong>YouTube settings</strong>.</p>
-  <p>Source code and additional information are available <a href="https://github.com/PoomSmart/YouQuality">in PoomSmart's GitHub repository</a>.</p>
+  <p>Developed by <a href="https://github.com/PoomSmart">PoomSmart</a>. Adds quality settings directly to the video overlay.</p>
+  <p><strong>Source:</strong> <a href="https://github.com/PoomSmart/YouQuality">GitHub Repository</a></p>
 </details>
 
 <details>
   <summary>DontEatMyContent</summary>
-  <p>DontEatMyContent is a tweak developed by <a href="https://github.com/therealFoxster">therealFoxster</a> that prevents the Notch/Dynamic Island from munching on 2:1 video content in the iOS YouTube app.</p>
-  <p><strong>DontEatMyContent preferences</strong> are available in the <strong>YouTube settings</strong>.</p>
-  <p>Source code and additional information are available <a href="https://github.com/therealFoxster/DontEatMyContent">in therealFoxster's GitHub repository</a>.</p>
+  <p>Developed by <a href="https://github.com/therealFoxster">therealFoxster</a>. Prevents the Notch/Dynamic Island from cutting off 2:1 content.</p>
+  <p><strong>Source:</strong> <a href="https://github.com/therealFoxster/DontEatMyContent">GitHub Repository</a></p>
 </details>
-
-## How to Sideload YTLite on iOS (Windows)
-
-To sideload the **YTLite** app you built via GitHub Actions onto your non-jailbroken iPhone using a Windows PC, the most recommended tool is **Sideloadly** or **AltStore**. 
-
-### Step 1: Download Your Built IPA
-
-1. Go to your forked **YTLite** repository on GitHub.
-2. Navigate to the **Actions** tab.
-3. Click on the most recent successful workflow run (it should be titled "Build and Release YTLite" or similar).
-4. Scroll down to the **Artifacts** section and download the `.ipa` file to your Windows PC. 
-
-### Step 2: Prepare Your Windows PC
-
-Before you can install the app, you must install the following software directly from Apple's website (**not** the Microsoft Store version, which often lacks necessary drivers): 
-
-*   **iTunes for Windows (64-bit)**
-*   **iCloud for Windows** 
-
-### Step 3: Sideload using Sideloadly (Easiest Method) 
-
-1.  **Download Sideloadly:** Install it from the Sideloadly Official Website.
-2.  **Connect Device:** Plug your iPhone into your PC via USB and tap **"Trust"** on the phone if prompted.
-3.  **Configure Sideloadly:**
-    *   Open Sideloadly; your device should appear in the **iDevice** field.
-    *   Drag your downloaded **YTLite .ipa** file into the large IPA icon box.
-    *   Enter your **Apple ID** email.
-4.  **Start Install:** Click **Start**. You may be asked for your Apple ID password; this is sent only to Apple to sign the app for your device.
-5.  **Trust the App:**
-    *   Once "Done" appears, go to your iPhone's **Settings > General > VPN & Device Management**.
-    *   Tap your Apple ID under "Developer App" and select **Trust**.
-    *   *(iOS 16+ only)* Go to **Settings > Privacy & Security**, scroll to the bottom, and enable **Developer Mode**. 
-
-### Important Limitations
-
-*   **7-Day Refresh:** Apps sideloaded with a free Apple ID expire every 7 days. You must reconnect your phone to your PC and run Sideloadly again to "refresh" it.
-*   **3-App Limit:** You can only have 3 active sideloaded apps at one time on a single device.
